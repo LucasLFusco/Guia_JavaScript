@@ -1,0 +1,30 @@
+● Auxilio
+    ●● [=] - Recebe
+    ●● [+] - Concatenação
+        💬 number + number - adição
+        💬 string + number - concatenação
+    ●● null - Nulo
+    ●● var / let - variavel
+● Tranformação 
+    ●● Para transformar strings em numeros
+        💬 Number(n)
+        💬 Number.parseInt
+        💬 Number.parseFloat
+    ●● Para transformar números em string
+        💬 String(n)
+        💬 toString
+
+●Formatar     
+    ●● s.length - Quantos caracteres a string tem 
+    ●● s.toUpperCase()- Tudo em 'MAIUSCULO'
+    ●● s.toLowerCase()- Tudo em 'minusculo'
+
+    ●● n1.toFixed(2) - Para aumentar a casa decimal
+    ●● n1.toLocaleString('pt-br, {style: 'currency', currency: 'BRL'})
+
+
+
+● Window
+    ●● Alert() - Alerta
+    ●● Confirm() - Confirmação
+    ●● Prompt() - Interação com o Usuario solicitando dados
