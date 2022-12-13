@@ -1,4 +1,4 @@
-# Curso de HTML5 E CSS3 do Professor Guanabara
+# Curso de JavaScript do Professor Guanabara
 
 ***
 

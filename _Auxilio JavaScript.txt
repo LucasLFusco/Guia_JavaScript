@@ -1,11 +1,211 @@
-● Auxilio
-    ●● [=] - Recebe
-    ●● [+] - Concatenação
-        💬 number + number - adição
-        💬 string + number - concatenação
-    ●● null - Nulo
-    ●● var / let - variavel
-● Tranformação 
+● AUXILIO
+    ●● [=] ↪ Recebe
+    ●● [+] ↪ Concatenação
+        💬 number + number ↪ adição
+        💬 string + number ↪ concatenação
+    ●● null ↪ Nulo
+    ●● var / let ↪ decralação de uma variavel
+    ●● innerHTML ↪ Pega o HTML inteiro (com os parentes)
+    ●● innerText ↪ Pega o texto sem formatação (sem os parentes)
+    ●● Para utilizar emojis ↪ \u{*codigo do emoji (www.unicode/emoji)*}
+        ❗ Só funciona entre crases ``
+
+● ARRAY (Variável composta)
+    ●● Funções ↪ são ações executadas assim que são chamadas ou em decorrência de algum evento.
+        💬 Uma função pode receber parâmetros e retornar um resultado.
+
+        ●●● Identifica por chaves []
+            💬 let num = [5,3,1]
+        ●●● Para acrencentar um valor sem perder os dados anteriores
+            💬 num[3] = 6
+        ●●● Para colocar na ultima posição
+            💬 num.push(7)
+        ●●● Para saber o comprimento do vetor (não tem parenteses apos o length)
+            💬 num.length
+        ●●● Coloca todos os elementos em ordem crescente
+            💬 num.sort()
+        ●●● Para mostrar sem a formatação []
+            💬 for(let pos = 0;pos < num.length; pos++){
+                    console.log(num[pos])
+                }
+            📌 for(let pos in num){
+                    console.log(num[pos])
+                }
+            💢 Para cada posição em NUM (na variável composta) eu vou mostrar o NUMpos
+        ●●● Para buscar valores dentro de um vetor   
+            💬 num.indexOf(7)
+            💢 Se o valor mencionado não for encontrado ele irá retornar o valor -1
+
+● DOM
+    💬Documento Object Model (Modelo de objetos para documento)
+    ●● Árvore DOM   
+        ●●● Window
+            ●●●● Location
+            ●●●● History
+            ●●●● Document  
+                ●●●●● HTML
+                    ●●●●●● Head
+                        ● Meta
+                        ● Title
+                    ●●●●●● Body
+                        ● H1
+                        ● P
+                        ● P
+                            ●●STRONG
+                        ● Div
+
+    ●● Selecionando
+        💬 Quando tiver mais de 1 elemento da mesma classe(obejto) usar o [] no final para especificar qual filho irá ser utilizado (Começando por 0, onde é o primeiro filho)
+        ●●● por Marca
+            ↪ getElementsByTagName()[0]
+        ●●● por ID
+            ↪ getElementByID()
+        ●●● por Nome
+            ↪ getElementsByName()[0]
+        ●●● por Classe
+            ↪ getElementsByClassName()[0]
+        ●●● por Seletor
+            ↪ querySelector()
+            ↪ querySelectorAll()
+
+    ●● Eventos DOM  
+        ●●● Funções
+        function ação(*parametros*){} 
+        💬 Para saber mais de funções acessar: Eventos Dom do Mozilla Developer ↪ https://developer.mozilla.org/pt-BR/docs/Web/Events  
+
+● CONDIÇÕES
+            ↶ ◆ ↷
+         True     False
+          ↪   □    ↩
+    if(condição){
+        true
+    }else[senão]{false}
+
+    ●● Tipos de Condições   
+        ●●● Condição Simples ↪ if(condição){} A condição falsa não existe (se ouver condição falsa nada ira acontecer)
+        ●●● Condição Composta ↪ if(condição){true}else{false}
+        ●●● Condição Aninhadas ↪ Uma condição Composta dentro da outra 
+            if(condição){
+                bloco1
+            }else{if(condição2){
+                bloco2
+                }else{bloco3}
+                }
+        ●●● Condição Multiplas ↪ Possiblidade de valores fixos (não é aplicavel para todo tipo de situação) ↪ Importante para dados pontuais (sem maior que, ou, e ...)
+        ‼ Nescessário o uso dos breaks para não dar erro
+            switch (espressão){
+                case valor 1:
+
+                    break
+                case valor 1:
+
+                    break
+                case valor 1:
+
+                    break
+                default:
+
+                    break
+            }
+
+● FORMATAR
+    ●● s.length ↪ Quantos caracteres a string tem 
+    ●● s.toUpperCase()↪ Tudo em 'MAIUSCULO'
+    ●● s.toLowerCase()↪ Tudo em 'minusculo'
+
+    ●● n1.toFixed(2) ↪ Para aumentar a casa decimal
+    ●● n1.toLocaleString('pt-br, {style: 'currency', currency: 'BRL'})
+
+● OBJETOS
+    ●● Pode conter função dentro de variaveis
+    ●● let amigo = {nome:'José', sexo:'M', peso:85.4, engordar(p){}}
+    💬 | José | M | 85.4 | [function] |
+         nome  sexo  peso   engordar()
+
+● OPERADORES
+    💬 Ordem de precedência
+     📌Aritmetricos ↪ Relacionais ↪ Lógicos
+
+    ●● Aritmeticos
+        ●●● + ↪ Soma
+        ●●● - ↪ Subtração
+        ●●● * ↪ Multiplicação
+        ●●● / ↪ Divisão
+        ●●● % ↪ Resto da divisão inteira
+        ●●● ** ↪ Potência
+        💬 Ordem de precedência
+            📌() ↪ ** ↪ [* / %] ↪ [+-]
+    
+    ●● Atribuição
+        ●●●● var n = 3 [n = 3] 💬Simplificação ⇓ 
+        ●●●● n = n + 4 [n = 7] 💬 n += 4
+        ●●●● n = n - 5 [n = 2] 💬 n -= 5
+        ●●●● n = n * 4 [n = 8] 💬 n *= 4
+        ●●●● n = n / 2 [n = 4] 💬 n /= 2
+        ●●●● n = n ** 2 [n = 16] 💬 n **= 2
+        ●●●● n = n % 5 [n = 1] 💬 n %= 5
+
+        ●●● Incremento
+            ●●●● n++ ↪ pós-incremento - O resultado da soma aparece depois
+            ●●●● ++n ↪ pré-incremento - O resultado da soma aparece antes
+            ●●●● n-- ↪ pós-decremento - O resultado da subtração aparece depois
+            ●●●● --n ↪ pré-decremento - O resultado da subtração aparece antes
+    
+    ●● Relacionais
+        💬 O resultado das operações sempre resultará em um valor booleano (verdadeiro ou falso)
+        💬 Ordem de precedência ↪ Quem aparecer primeiro
+
+        ●●●● > ↪ Maior
+        ●●●● < ↪ Menor
+        ●●●● >= ↪ Maior ou igual
+        ●●●● <= ↪ Menor ou igual
+        ●●●● == ↪ Igual
+        ●●●● != ↪ Não igual (diferente)
+
+        ●●● Identidade
+            ●●●● === ↪ Identico (mesmo valor e tipo)
+            ●●●● !== ↪ Desigual restrito 
+
+    ●● Lógicos
+        💬 Ordem de precedência - Negação ↪ Conjunção(e) ↪ Disjunção(ou)
+
+        ●●● ! ↪ Negação 
+            💬 !true ↪ false
+            💬 !false ↪ true
+        ●●● && ↪ Conjunção ('e' logico) - ambos true para ser verdadeiro
+            💬 true&&true ↪ true
+            💬 true&&false ↪ false
+            💬 false&&true ↪ false
+            💬 false&&false ↪ false
+        ●●● || ↪ disjunção ('ou' logico) - basta 1 ser true para ser verdadeiro
+            💬 true||true ↪ true
+            💬 true||false ↪ true
+            💬 false||true ↪ true
+            💬 false||false ↪ false
+
+    ●● Ternário
+        💬 teste ? true : false
+        📌 O que acontece quando for verdadeiro e o que acontece quando for falso
+        ●●● ? 
+        ●●● : 
+
+● REPETIÇÕES (looping)
+    💬 Só vai acontecer enquanto a condição for verdadeira.
+    💬 Se a condição for falsa, ele sairá do bloco e seguirá o fluxo do programa.
+
+    ●● Estrutura de repetição com Teste Logico no INICIO.
+        📌while(condição){ } 
+            💬 Primeiro testa, depois executa o bloco .  
+    ●● Estrutura de repetição com Teste Logico no FINAL.
+        📌 do{
+            }while(condição)
+            💬 Primeiro executa o bloco, depois testa.
+            💬 
+     ●● Estrutura de repetição com Variável de Controle.
+        📌 for(inicio;teste;incr){}
+            💬 Inicia, testa (se verdadeiro), executa o bloco e incrementa.
+    
+● TRANSFORMAÇÃO
     ●● Para transformar strings em numeros
         💬 Number(n)
         💬 Number.parseInt
@@ -13,18 +213,17 @@
     ●● Para transformar números em string
         💬 String(n)
         💬 toString
+       
+● WINDOW
+    ●● Alert() ↪ Alerta
+    ●● Confirm() ↪ Confirmação
+    ●● Prompt() ↪ Interação com o Usuario solicitando dados
 
-●Formatar     
-    ●● s.length - Quantos caracteres a string tem 
-    ●● s.toUpperCase()- Tudo em 'MAIUSCULO'
-    ●● s.toLowerCase()- Tudo em 'minusculo'
-
-    ●● n1.toFixed(2) - Para aumentar a casa decimal
-    ●● n1.toLocaleString('pt-br, {style: 'currency', currency: 'BRL'})
-
-
-
-● Window
-    ●● Alert() - Alerta
-    ●● Confirm() - Confirmação
-    ●● Prompt() - Interação com o Usuario solicitando dados
+❗❗ ESTUDAR!
+    ↪ function (arrow, callbacks, anônimas, iife)
+    ↪ objetos 
+    ↪ modularização
+    ↪ RedEx (espressões regulares)
+    ↪ JSON 
+    ↪ AJAX
+    ↪ NodeJS

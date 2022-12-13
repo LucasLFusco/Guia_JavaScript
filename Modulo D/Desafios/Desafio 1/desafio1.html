@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais de nascimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Qual seu pais de nascimento</h1>
+    <p>
+        Eu nasci em 
+        <input type="text" name="txpais" id="txpais" required>
+        <input type="button" value="Localizar" onclick="localizar()">
+    </p>
+    <div id="res">
+
+    </div>
+
+    <script>
+        function localizar(){
+            var pais = document.getElementById('txpais')
+            var res = document.getElementById('res')
+            var pais = String(pais.value)
+            res.innerHTML = `Seu pais de origem é <strong>${pais} </strong>`
+            if (pais == 'brasil'||'Brasil'){
+                res.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
+            }else{
+                res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+            }
+        }
+    </script>
+
+</body>
+</html>
