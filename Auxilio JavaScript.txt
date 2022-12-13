@@ -97,10 +97,10 @@
                 case valor 1:
 
                     break
-                case valor 1:
+                case valor 2:
 
                     break
-                case valor 1:
+                case valor 3:
 
                     break
                 default:
